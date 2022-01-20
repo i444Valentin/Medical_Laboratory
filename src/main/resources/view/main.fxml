@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.worldskills.wsapp.controller.MainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="usersList"/>
-    <Button text="Get users" onAction="#onGetUsersButtonClick"/>
-</VBox>
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.worldskills.wsapp.controller.MainController">
+   <children>
+      <AnchorPane layoutX="1.0" prefHeight="122.0" prefWidth="500.0" style="-fx-background-color: #76E383;" />
+      <ImageView fitHeight="127.0" fitWidth="122.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="122.0" layoutY="14.0" prefHeight="91.0" prefWidth="353.0" text="Медицинская лаборатория г. Санкт-Петербурга" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="282.0" prefHeight="37.0" prefWidth="225.0" text="Пожалуйста, войдите">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loginTxtFld" layoutX="138.0" layoutY="352.0" prefHeight="37.0" prefWidth="214.0" promptText="Логин" style="-fx-background-color: #76E383;">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtFld" layoutX="138.0" layoutY="415.0" prefHeight="37.0" prefWidth="214.0" promptText="Пароль" style="-fx-background-color: #76E383;">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </TextField>
+      <Button layoutX="138.0" layoutY="481.0" mnemonicParsing="false" onAction="#buttonClickLogin" prefHeight="42.0" prefWidth="214.0" style="-fx-background-color: #498C51;" text="Войти" textOverrun="CLIP">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
